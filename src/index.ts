@@ -1,6 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { createSearchTools } from "./tools/search";
+import { createSearchTools } from "./tools/search.js";
 
 export const server = new McpServer({
     name: "Booth.pm",
