@@ -70,7 +70,7 @@ export function createSearchTools (server: McpServer) {
         { keyword: z.string(), exceptWords: z.array(z.string()).nullable(), tags: z.array(z.string()).nullable() },
         async ({ keyword, exceptWords, tags }) => {
             try {
-                const url = new URL("https://booth.pm/ja/search" + keyword);
+                const url = new URL("https://booth.pm/ja/search/" + keyword);
                 exceptWords?.map(s => url.searchParams.set("except_words[]", s));
                 tags?.map(s => url.searchParams.set("tags[]", s));
                 const response = await fetch(url);
